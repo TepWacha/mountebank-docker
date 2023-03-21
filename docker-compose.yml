@@ -1,42 +1,12 @@
 version: "3"
 services:
-
-  postgres:
-    image: postgres:14.6-alpine
-    ports:
-      - "5432:5432"
-    volumes:
-      - .local/postgres:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_DB=commonapply
-      - POSTGRES_USER=root
-      - POSTGRES_PASSWORD=password
-      - PGDATA=/var/lib/postgresql/data/
-
-  cache:
-    image: redis:7.0.5-alpine
-    ports:
-      - "6379:6379"
-    volumes:
-      - .local/redis:/data
-
-  mongo:
-    image: mongo:6.0.3
-    ports:
-      - "27017:27017"
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=root
-      - MONGO_INITDB_ROOT_PASSWORD=password
-    volumes:
-      - .local/redis:/data/db
-
   mountebank:
     container_name: mountebank
     image: jkris/mountebank:latest
     volumes:
-      - ./imposters:/imposters
+    - ./imposters:/imposters
     ports:
-      - 2525:2525
-      - 8090:8090
+    - 2525:2525
+    - 8090:8090
     command: --configfile /imposters/imposters.ejs --allowInjection
     
