@@ -1,0 +1,55 @@
+{
+   "predicates":[
+      {
+         "equals":{
+            "method":"POST",
+            "path":"/v1/product-service/customer/deposit/inquiry"
+         }
+      }
+   ],
+   "responses":[
+      {
+         "is":{
+            "statusCode":200,
+            "headers":{
+               "Content-Type":"application/json"
+            },
+            "body":{
+               "status":{
+                  "code":"0000",
+                  "header": null,
+                  "description":null
+               },
+               "data":{
+                     "depositAccounts":[
+                        {
+                           "productNameTh":"บัญชี ออลล์ ฟรี",
+                           "productNameEn":"all free account",
+                           "accountNumber":"0001234567",
+                           "accountName":"xxxx",
+                           "accountNickname":"NAME TEST",
+                           "accountType":"SDA",
+                           "relationshipCode":"PRIIND",
+                           "accountStatus":"ACTIVE",
+                           "allowPayLoanDirectDebit":"1",
+                           "allowReceiveLoanFund":"1"
+                        },
+                        {
+                           "productNameTh":"บัญชี เบสิค",
+                           "productNameEn":"basic account",
+                           "accountNumber":"0001234568",
+                           "accountName":"xxxx",
+                           "accountNickname":null,
+                           "accountType":"SDA",
+                           "relationshipCode":"PRIIND",
+                           "accountStatus":"ACTIVE",
+                           "allowPayLoanDirectDebit":"1",
+                           "allowReceiveLoanFund":"1"
+                        }
+                     ]
+               }
+            }
+         }
+      }
+   ]
+}

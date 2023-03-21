@@ -1,0 +1,46 @@
+                {
+                    "predicates": [
+                        {
+                            "equals": {
+                                "method": "GET",
+                                "path": "/v1/reference-data-service/country"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "is": {
+                                "statusCode": 200,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                },
+                                "body": {
+                                    "status": {
+                                        "code": "0000",
+                                        "header": null,
+                                        "description": null
+                                    },
+                                    "data": {
+                                        "entryList": [
+                                            {
+                                                "code": "TH",
+                                                "descriptionTh": "",
+                                                "descriptionEn": "Thailand"
+                                            },
+                                            {
+                                                "code": "MY",
+                                                "descriptionTh": "",
+                                                "descriptionEn": "Malaysia"
+                                            },
+                                            {
+                                                "code": "KR",
+                                                "descriptionTh": "",
+                                                "descriptionEn": "KOREA, REPUBLIC OF"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
